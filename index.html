@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090711">
+  <title>Trick or Treat: The Red Balloon</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-shell container-fluid">
+
+    <header class="topbar glass row align-items-center g-3" aria-label="Encabezado del videojuego">
+      <div class="brand col-12 col-lg">
+        <img class="header-game-image" src="assets/balloon.svg" alt="Globo rojo, imagen representativa del videojuego">
+        <div>
+          <h1>TRICK OR TREAT <span>— THE RED BALLOON</span></h1>
+          <p class="header-subtitle mb-0">Una noche de terror, movimiento y misterio.</p>
+        </div>
+      </div>
+      <div class="header-actions col-12 col-lg-auto d-flex flex-wrap align-items-center justify-content-lg-end">
+        <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false">♫ ACTIVAR AMBIENTE</button>
+        <div class="status"><span class="status-dot"></span> NIGHT MODE</div>
+      </div>
+    </header>
+
+
+    <main class="game-main" aria-label="Contenido principal del videojuego">
+      <section class="intro">
+        <h2>La noche también <span>juega contigo.</span></h2>
+        <p class="description">Veinticinco presencias recorren la oscuridad. Observa sus trayectorias… y no apartes la mirada cuando choquen.</p>
+      </section>
+
+      <section class="stage glass" aria-label="Escenario animado de Halloween">
+        <div class="stage-label"><span></span><div class="stage-meta"><span class="entity-count"></span><span class="click-counter" aria-live="polite">OBJETOS CLICKEADOS <strong id="clickCount">0</strong></span></div></div>
+        <canvas id="gameCanvas" aria-label="Animación 2D con objetos de Halloween"></canvas>
+
+
+        <section class="game-instructions" aria-label="Instrucciones del juego">
+          <div class="instructions-heading"><span aria-hidden="true">🎈</span> ¿CÓMO JUGAR?</div>
+          <div class="instructions-items">
+            <span><strong>1.</strong> Apunta a un objeto.</span>
+            <span><strong>2.</strong> Haz clic para moverlo a otra zona.</span>
+            <span><strong>3.</strong> Suma aciertos en el contador.</span>
+            <span><strong>♫</strong> Activa la música si lo deseas.</span>
+          </div>
+        </section>
+
+
+      </section>
+    </main>
+
+
+    
+<footer class="game-footer">
+  <p>
+    Instituto Tecnológico Nacional de México
+    <span>|</span>
+    Campus Pachuca
+    <span>|</span>
+    Labra Lugo Kevin Bryan
+    <span>|</span>
+    23200928
+  </p>
+</footer>
+
+  </div>
+
+  <audio id="backgroundMusic" src="assets/audio-circo.mp3" loop preload="none"></audio>
+  <script src="game.js"></script>
+</body>
+</html>
